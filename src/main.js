@@ -103,8 +103,7 @@ else {
 }
 
 
-
-export let showBox = new SimpleLightbox('.img-box a', { 
+ let showBox = new SimpleLightbox('.img-box a', { 
     captions: true,
     captionsData: 'alt',
     captionDelay: 250,
