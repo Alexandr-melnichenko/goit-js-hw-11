@@ -6,16 +6,71 @@
 */
 /* Common styles */
 @import url('./reset.css');
-
+@import url('./loader.css');
 
 .form {
   width: fit-content;
   margin: auto;
+  display: flex;
+align-items: center;
+justify-content: flex-start;
+flex-direction: row;
+gap: 8px;
 }
+
 .search-input {
+  display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+flex-direction: row;
+gap: 8px;
+
+width: 272px;
+height: 36px;
+border: 1px solid #808080;
+border-radius: 4px;
+
+font-family: "Montserrat", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+color: #808080;
 }
+
+.search-input:hover, .search-input:focus {
+  border: 1px solid #000000;
+}
+
+
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+border: none;
+  border-radius: 8px;
+padding: 8px 16px;
+width: 91px;
+height: 40px;
+color: #fff;
+background: #4e75ff;
+
+font-family: "Montserrat", sans-serif;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+color: #fff;
+
 }
+
+.btn:hover {
+  background: #6c8cff;
+}
+
+
 .gallery {
   display: flex;
     flex-direction: row;
