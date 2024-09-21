@@ -1,5 +1,3 @@
-// import { query } from "../main";
-
 export const BASE_URL = "https://pixabay.com/";
 export const API_KEY = "46035162-73af77dc9f391d36c3be30780";
 
@@ -13,11 +11,8 @@ const options = {
   safesearch: "true",
 };
 
-// Перетворюю обʼєкт в урл формат запиту
 const params = new URLSearchParams(options);
-console.log(params.toString()); // Для проверки правильности параметров
 
-// Проміс фетч з запитом та методами обробки даних
 return fetch(`${BASE_URL}api/?${params}`)
 .then((response) => {
     if (!response.ok) {
