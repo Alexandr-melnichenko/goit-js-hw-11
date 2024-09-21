@@ -1,4 +1,3 @@
-// Імпорт бібліотек
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 import { queryFunction } from "./js/pixabay-api";
@@ -17,7 +16,6 @@ const showBox = new SimpleLightbox('.img-box a', {
     className: 'lightbox',
    });
 
-   // Функції для запуску та закриття лоадера
  function showLoader() {
     document.getElementById('loader').style.display = 'block';
     }
@@ -26,7 +24,6 @@ const showBox = new SimpleLightbox('.img-box a', {
         document.getElementById('loader').style.display = 'none';
     }
 
-    // Колбек при натисканні кнопки + запит на сервер
  function onButtonSubmit (event) {
         event.preventDefault();
         showLoader();
@@ -36,9 +33,7 @@ const showBox = new SimpleLightbox('.img-box a', {
         searchValue: { value: query },
       } = forma.elements;
     console.log(query);
-
-     
-    // Перевірка на пустий інпут    
+   
     if (query === "") {
         iziToast.show({
             message: `⚠️ Please fill search input`,
@@ -49,9 +44,7 @@ const showBox = new SimpleLightbox('.img-box a', {
     return
     }
      
-    //   зачистка попередньої видачі
     gallery.innerHTML = "";  
-    
     
     queryFunction(query)
       .then((photos) => {
